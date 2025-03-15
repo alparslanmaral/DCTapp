@@ -10,7 +10,7 @@
     <div class="container">
         <header>
             <div class="header-left">
-                <img src="pp.webp" alt="Profile" class="profile-pic">
+                <img src="img/pp.webp" alt="Profile" class="profile-pic">
             </div>
             <div class="header-center">
                 <h1>DCT App</h1>
@@ -32,41 +32,73 @@
             <span>Gündem</span>
         </div>
 
-        <div class="news-section">
+        <div class="news-section" id="trending-section">
             <h2>Trending</h2>
-            <div class="news-card">
-                <img src="trend.webp" alt="Trending News">
-                <div class="news-details">
-                    <p>34 articles | 1720 reads</p>
-                    <h3>Regulators close Signature Bank, second shuttered.</h3>
-                </div>
-            </div>
         </div>
 
-        <div class="recommended-section">
+        <div class="recommended-section" id="recommended-section">
             <h2>Recommended <a href="#" class="see-more">See More</a></h2>
-            <div class="recommendation-card">
-                <img src="tech.webp" alt="Education News">
-                <div class="news-details">
-                    <p>Tech | McKindney - Jun 12, 2024</p>
-                    <h3>Killing of teacher and Hamas assault set a jittery France.</h3>
-                </div>
-            </div>
-            <div class="recommendation-card">
-                <img src="spor.webp" alt="Sports News">
-                <div class="news-details">
-                    <p>Spors</p>
-                    <h3>IP Auction 2024, everything you need to know.</h3>
-                </div>
-            </div>
         </div>
         
         <footer>
-            <a href="#" class="footer-icon">🏠</a>
-            <a href="#" class="footer-icon">🔍</a>
+            <a href="index.html" class="footer-icon">🏠</a>
+            <a href="search.html" class="footer-icon">🔍</a>
             <a href="#" class="footer-icon">📑</a>
-            <a href="#" class="footer-icon">👤</a>
         </footer>
     </div>
+
+    <script>
+        fetch('posts.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(posts => {
+                const trendingSection = document.getElementById('trending-section');
+                const recommendedSection = document.getElementById('recommended-section');
+
+                if (posts.length > 0) {
+                    const trendingPost = posts[0];
+                    trendingSection.innerHTML += `
+                        <div class="news-card" onclick="goToNews(${trendingPost.id})">
+                            <img src="${trendingPost.image}" alt="${trendingPost.title}">
+                            <div class="news-details">
+                                <p>34 articles | 1720 reads</p>
+                                <h3>${trendingPost.title}</h3>
+                            </div>
+                        </div>
+                    `;
+
+                    posts.slice(1).forEach(post => {
+                        recommendedSection.innerHTML += `
+                            <div class="recommendation-card" onclick="goToNews(${post.id})">
+                                <img src="${post.image}" alt="${post.title}">
+                                <div class="news-details">
+                                    <p>${post.author} - Jun 12, 2024</p>
+                                    <h3>${post.title}</h3>
+                                </div>
+                            </div>
+                        `;
+                    });
+                } else {
+                    trendingSection.innerHTML += `<p>No trending posts available.</p>`;
+                    recommendedSection.innerHTML += `<p>No recommended posts available.</p>`;
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching posts:', error);
+                const trendingSection = document.getElementById('trending-section');
+                const recommendedSection = document.getElementById('recommended-section');
+                trendingSection.innerHTML += `<p>Error loading posts. Check console for details.</p>`;
+                recommendedSection.innerHTML += `<p>Error loading posts. Check console for details.</p>`;
+            });
+
+        // Function to navigate to news page
+        function goToNews(postId) {
+            window.location.href = `news.html?id=${postId}`;
+        }
+    </script>
 </body>
 </html>

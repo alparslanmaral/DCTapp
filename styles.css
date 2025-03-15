@@ -68,7 +68,7 @@ h1 {
     color: #555;
 }
 
-.news-section, .recommended-section {
+.news-section, .recommended-section, .search-results {
     padding: 15px;
 }
 
@@ -87,6 +87,11 @@ h2 {
 .news-card, .recommendation-card {
     display: flex;
     margin-bottom: 15px;
+    cursor: pointer; /* Indicate clickable */
+}
+
+.news-card:hover, .recommendation-card:hover {
+    background-color: #f0f0f0; /* Optional: Highlight on hover */
 }
 
 .news-card img, .recommendation-card img {
@@ -113,6 +118,27 @@ h2 {
     margin: 5px 0 0;
 }
 
+.search-results p {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+
+.news-details img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.news-details h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.news-details p strong {
+    color: #333;
+}
+
 footer {
     display: flex;
     justify-content: space-around;
@@ -131,4 +157,8 @@ footer {
     font-size: 20px;
     text-decoration: none;
     color: #333;
+}
+
+.footer-icon.active {
+    color: #007bff; /* Highlight color for active icon */
 }

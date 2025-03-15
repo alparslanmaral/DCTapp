@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Regulators close Signature Bank, second shuttered.",
+        "content": "Financial regulators have closed Signature Bank, marking the second major bank shutdown this year amid economic instability.",
+        "image": "img/spor.webp",
+        "author": "McKindney"
+    },
+    {
+        "id": 2,
+        "title": "Killing of teacher and Hamas assault set a jittery France.",
+        "content": "A tragic incident involving a teacher and a Hamas assault has left France on edge, raising security concerns.",
+        "image": "img/tech.webp",
+        "author": "McKindney"
+    },
+    {
+        "id": 3,
+        "title": "IPL Auction 2024, everything you need to know.",
+        "content": "The IPL Auction 2024 is set to bring exciting bids and surprises for cricket fans worldwide.",
+        "image": "img/spor.webp",
+        "author": "Sports Guru"
+    }
+]

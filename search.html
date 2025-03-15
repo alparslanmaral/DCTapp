@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCT - Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <img src="img/pp.webp" alt="Profile" class="profile-pic">
+            </div>
+            <div class="header-center">
+                <h1>Search</h1>
+            </div>
+            <div class="header-right">
+                <button class="bell-icon">🔔</button>
+            </div>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for news...">
+        </div>
+
+        <footer>
+            <a href="index.html" class="footer-icon">🏠</a>
+            <a href="search.html" class="footer-icon active">🔍</a>
+            <a href="#" class="footer-icon">📑</a>
+        </footer>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('search-input');
+
+        // Handle Enter key press
+        searchInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                searchPosts();
+            }
+        });
+
+        function searchPosts() {
+            const query = searchInput.value.trim().toLowerCase();
+            if (!query) return; // Do nothing if input is empty
+
+            fetch('posts.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(posts => {
+                    const results = posts.filter(post => 
+                        post.title.toLowerCase().includes(query) || 
+                        post.content.toLowerCase().includes(query) || 
+                        post.author.toLowerCase().includes(query)
+                    );
+                    if (results.length > 0) {
+                        const params = new URLSearchParams();
+                        params.append('query', query);
+                        params.append('results', JSON.stringify(results));
+                        window.location.href = `results.html?${params.toString()}`;
+                    } else {
+                        alert('No results found for "' + query + '".');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching posts:', error);
+                    alert('Error loading posts. Check console for details.');
+                });
+        }
+    </script>
+</body>
+</html>

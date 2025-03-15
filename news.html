@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCT - News</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <img src="img/pp.webp" alt="Profile" class="profile-pic">
+            </div>
+            <div class="header-center">
+                <h1>News</h1>
+            </div>
+            <div class="header-right">
+                <button class="bell-icon">🔔</button>
+            </div>
+        </header>
+
+        <div class="news-details" id="news-details">
+            <p>Loading...</p>
+        </div>
+
+        <footer>
+            <a href="index.html" class="footer-icon">🏠</a>
+            <a href="search.html" class="footer-icon">🔍</a>
+            <a href="#" class="footer-icon">📑</a>
+        </footer>
+    </div>
+
+    <script>
+        // Get the post ID from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = urlParams.get('id');
+
+        fetch('posts.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(posts => {
+                const post = posts.find(p => p.id === parseInt(postId));
+                const newsDetails = document.getElementById('news-details');
+                if (post) {
+                    newsDetails.innerHTML = `
+                        <img src="${post.image}" alt="${post.title}" style="width: 100%; height: auto;">
+                        <h2>${post.title}</h2>
+                        <p><strong>Author:</strong> ${post.author} - Jun 12, 2024</p>
+                        <p>${post.content}</p>
+                    `;
+                } else {
+                    newsDetails.innerHTML = `<p>News not found.</p>`;
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching posts:', error);
+                document.getElementById('news-details').innerHTML = `<p>Error loading news. Check console for details.</p>`;
+            });
+    </script>
+</body>
+</html>

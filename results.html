@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCT - Search Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <img src="img/pp.webp" alt="Profile" class="profile-pic">
+            </div>
+            <div class="header-center">
+                <h1>Search Results</h1>
+            </div>
+            <div class="header-right">
+                <button class="bell-icon">🔔</button>
+            </div>
+        </header>
+
+        <div class="search-results" id="search-results">
+            <p>Loading results...</p>
+        </div>
+
+        <footer>
+            <a href="index.html" class="footer-icon">🏠</a>
+            <a href="search.html" class="footer-icon">🔍</a>
+            <a href="#" class="footer-icon">📑</a>
+        </footer>
+    </div>
+
+    <script>
+        // Get query and results from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('query');
+        const results = JSON.parse(urlParams.get('results') || '[]');
+
+        const searchResultsDiv = document.getElementById('search-results');
+        searchResultsDiv.innerHTML = `<p>Results for "${query}":</p>`;
+
+        if (results.length > 0) {
+            results.forEach(post => {
+                searchResultsDiv.innerHTML += `
+                    <div class="recommendation-card" onclick="goToNews(${post.id})">
+                        <img src="${post.image}" alt="${post.title}">
+                        <div class="news-details">
+                            <p>${post.author} - Jun 12, 2024</p>
+                            <h3>${post.title}</h3>
+                            <p>${post.content.substring(0, 100)}...</p>
+                        </div>
+                    </div>
+                `;
+            });
+        } else {
+            searchResultsDiv.innerHTML += `<p>No results found.</p>`;
+        }
+
+        // Function to navigate to news page
+        function goToNews(postId) {
+            window.location.href = `news.html?id=${postId}`;
+        }
+    </script>
+</body>
+</html>
