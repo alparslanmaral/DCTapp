@@ -27,11 +27,11 @@
         </div>
 
         <div class="category-bar">
-            <span>Ana Sayfa</span>
-            <span>Teknoloji</span>
-            <span>Oyun</span>
-            <span>Spor</span>
-            <span>Gündem</span>
+            <span data-tag="all">Ana Sayfa</span>
+            <span data-tag="technology">Teknoloji</span>
+            <span data-tag="gaming">Oyun</span>
+            <span data-tag="sports">Spor</span>
+            <span data-tag="agenda">Gündem</span>
         </div>
 
         <div class="news-section" id="trending-section">
@@ -160,6 +160,68 @@
                 searchPosts();
             }
         });
+
+        // Add event listeners to category buttons for filtering posts by tag
+        document.querySelectorAll('.category-bar span').forEach(button => {
+            button.addEventListener('click', function() {
+                const tag = this.getAttribute('data-tag');
+                filterPostsByTag(tag);
+            });
+        });
+
+        // Function to filter posts by tag
+        function filterPostsByTag(tag) {
+            fetch('posts.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(posts => {
+                    const filteredPosts = tag === 'all' ? posts : posts.filter(post => post.tags.includes(tag));
+                    const trendingSection = document.getElementById('trending-section');
+                    const recommendedSection = document.getElementById('recommended-section');
+
+                    trendingSection.innerHTML = '<h2>Trending</h2>';
+                    recommendedSection.innerHTML = '<h2>Recommended <a href="#" class="see-more">See More</a></h2>';
+
+                    if (filteredPosts.length > 0) {
+                        const trendingPost = filteredPosts[0];
+                        trendingSection.innerHTML += `
+                            <div class="news-card" onclick="goToNews(${trendingPost.id})">
+                                <img src="${trendingPost.image}" alt="${trendingPost.title}">
+                                <div class="news-details">
+                                    <p>34 articles | 1720 reads</p>
+                                    <h3>${trendingPost.title}</h3>
+                                </div>
+                            </div>
+                        `;
+
+                        filteredPosts.slice(1).forEach(post => {
+                            recommendedSection.innerHTML += `
+                                <div class="recommendation-card" onclick="goToNews(${post.id})">
+                                    <img src="${post.image}" alt="${post.title}">
+                                    <div class="news-details">
+                                        <p>${post.author} - Jun 12, 2024</p>
+                                        <h3>${post.title}</h3>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                    } else {
+                        trendingSection.innerHTML += `<p>No trending posts available.</p>`;
+                        recommendedSection.innerHTML += `<p>No recommended posts available.</p>`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching posts:', error);
+                    const trendingSection = document.getElementById('trending-section');
+                    const recommendedSection = document.getElementById('recommended-section');
+                    trendingSection.innerHTML += `<p>Error loading posts. Check console for details.</p>`;
+                    recommendedSection.innerHTML += `<p>Error loading posts. Check console for details.</p>`;
+                });
+        }
     </script>
 </body>
 </html>

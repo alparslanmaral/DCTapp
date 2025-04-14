@@ -82,6 +82,18 @@ h1 {
     color: #555;
 }
 
+.category-bar span {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.category-bar span:hover {
+    background-color: #e0e0e0;
+}
+
 .news-section, .recommended-section, .search-results {
     padding: 15px;
 }
