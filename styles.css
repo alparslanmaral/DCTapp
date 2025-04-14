@@ -13,7 +13,6 @@ body {
 .container {
     width: 375px; /* Mimics a typical mobile screen width */
     background-color: #fff;
-    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     min-height: 100vh; /* Makes the container stretch to full viewport height */
     display: flex;
