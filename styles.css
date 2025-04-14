@@ -192,7 +192,7 @@ h2 {
 footer {
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
+    padding: 15px 0; /* Increased padding for larger size */
     background-color: #fff;
     border-top: 1px solid #ddd;
     position: fixed; /* Fixes the footer at the bottom */
@@ -205,10 +205,16 @@ footer {
 }
 
 .footer-icon {
-    font-size: 20px;
+    font-size: 24px; /* Increased font size for larger icons */
     text-decoration: none;
     color: #333;
     transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.footer-icon img {
+    width: 24px; /* Ensure the images fit within the increased icon size */
+    height: 24px;
+    object-fit: contain; /* Ensure the images are not distorted */
 }
 
 .footer-icon.active {
