@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCT</title>
+    <title>DCT - Spor</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
                 <img src="img/pp.webp" alt="Profile" class="profile-pic">
             </div>
             <div class="header-center">
-                <h1>DCT App</h1>
+                <h1>DCT App - Spor</h1>
             </div>
             <div class="header-right">
                 <button class="bell-icon">🔔</button>
@@ -61,8 +61,10 @@
                 const trendingSection = document.getElementById('trending-section');
                 const recommendedSection = document.getElementById('recommended-section');
 
-                if (posts.length > 0) {
-                    const trendingPost = posts[0];
+                const filteredPosts = posts.filter(post => post.tags.includes('Spor'));
+
+                if (filteredPosts.length > 0) {
+                    const trendingPost = filteredPosts[0];
                     trendingSection.innerHTML += `
                         <div class="news-card" onclick="goToNews(${trendingPost.id})">
                             <img src="${trendingPost.image}" alt="${trendingPost.title}">
@@ -73,7 +75,7 @@
                         </div>
                     `;
 
-                    posts.slice(1).forEach(post => {
+                    filteredPosts.slice(1).forEach(post => {
                         recommendedSection.innerHTML += `
                             <div class="recommendation-card" onclick="goToNews(${post.id})">
                                 <img src="${post.image}" alt="${post.title}">
