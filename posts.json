@@ -5,7 +5,7 @@
         "content": "Financial regulators have closed Signature Bank, marking the second major bank shutdown this year amid economic instability.",
         "image": "img/spor.webp",
         "author": "McKindney",
-        "tags": ["agenda"]
+        "tags": ["Gündem"]
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "content": "A tragic incident involving a teacher and a Hamas assault has left France on edge, raising security concerns.",
         "image": "img/tech.webp",
         "author": "McKindney",
-        "tags": ["technology"]
+        "tags": ["Teknoloji"]
     },
     {
         "id": 3,
@@ -21,6 +21,6 @@
         "content": "The IPL Auction 2024 is set to bring exciting bids and surprises for cricket fans worldwide.",
         "image": "img/spor.webp",
         "author": "Sports Guru",
-        "tags": ["sports"]
+        "tags": ["Spor"]
     }
 ]
