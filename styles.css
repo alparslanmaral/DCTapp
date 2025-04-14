@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f5; /* Updated to a more modern, soft color */
+    background-color: #1C1C2C; /* Updated to a more modern, soft color */
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: flex-start; /* Aligns to the top vertically */
@@ -69,12 +69,12 @@ h1 {
 
 .search-bar button {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #0C0C24;
     border-left: none; /* Remove left border to merge with input */
     border-radius: 0 20px 20px 0; /* Rounded corners for the right side */
     font-size: 14px;
-    background-color: #007bff;
-    color: white;
+    background-color: #F43C04;
+    color: #0C0C24;
     cursor: pointer;
     height: 100%; /* Match the input height */
     transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
@@ -92,9 +92,9 @@ h1 {
 
 .category-bar span {
     padding: 5px 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #F43C04;
     border-radius: 5px;
-    background-color: #f0f0f0;
+    background-color: #0C0C24;
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
 }
@@ -116,7 +116,7 @@ h2 {
 .see-more {
     float: right;
     font-size: 14px;
-    color: #007bff;
+    color: #F43C04;
     text-decoration: none;
     transition: color 0.3s ease; /* Smooth transition for color */
 }
@@ -223,13 +223,13 @@ footer {
 
 /* Dark theme styles */
 .dark-theme body {
-    background-color: #121212;
+    background-color: #1C1C2C;
     color: #e0e0e0;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
 
 .dark-theme .container {
-    background-color: #1e1e1e;
+    background-color: #1C1C2C;
     color: #e0e0e0;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
@@ -258,7 +258,7 @@ footer {
 }
 
 .dark-theme footer {
-    background-color: #1e1e1e;
+    background-color: #1C1C2C;
     border-top: 1px solid #333;
     transition: background-color 0.3s ease, border-top 0.3s ease; /* Smooth transitions */
 }
