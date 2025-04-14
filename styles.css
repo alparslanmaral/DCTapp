@@ -71,16 +71,6 @@ h1 {
     color: white;
     cursor: pointer;
     height: 100%; /* Match the input height */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
-
-.search-bar button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-.search-bar button:active {
-    background-color: #004494; /* Even darker blue on click */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Glow effect on click */
 }
 
 .category-bar {
@@ -98,16 +88,10 @@ h1 {
     border-radius: 5px;
     background-color: #f0f0f0;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 .category-bar span:hover {
     background-color: #e0e0e0;
-}
-
-.category-bar span:active {
-    background-color: #d0d0d0; /* Darker gray on click */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Glow effect on click */
 }
 
 .news-section, .recommended-section, .search-results {
@@ -130,16 +114,10 @@ h2 {
     display: flex;
     margin-bottom: 15px;
     cursor: pointer; /* Indicate clickable */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 .news-card:hover, .recommendation-card:hover {
     background-color: #f0f0f0; /* Optional: Highlight on hover */
-}
-
-.news-card:active, .recommendation-card:active {
-    background-color: #e0e0e0; /* Darker gray on click */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Glow effect on click */
 }
 
 .news-card img, .recommendation-card img {
