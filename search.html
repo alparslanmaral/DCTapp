@@ -23,6 +23,7 @@
 
         <div class="search-bar">
             <input type="text" id="search-input" placeholder="Search for news...">
+            <button id="search-button">Search</button>
         </div>
 
         <footer>
@@ -73,6 +74,9 @@
                     alert('Error loading posts. Check console for details.');
                 });
         }
+
+        // Add event listener to search button
+        document.getElementById('search-button').addEventListener('click', searchPosts);
 
         // Function to toggle between light and dark themes
         function toggleTheme() {
