@@ -49,14 +49,28 @@ h1 {
 
 .search-bar {
     padding: 10px 15px;
+    display: flex;
+    justify-content: center; /* Center the search bar horizontally */
 }
 
 .search-bar input {
-    width: 100%;
+    width: 80%; /* Adjust width to fit the button */
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px; /* Rounded corners for the left side */
     font-size: 14px;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-left: none; /* Remove left border to merge with input */
+    border-radius: 0 20px 20px 0; /* Rounded corners for the right side */
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    height: 100%; /* Match the input height */
 }
 
 .category-bar {
