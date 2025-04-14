@@ -1,12 +1,93 @@
 [
     {
         "id": 1,
-        "title": "Regulators close Signature Bank, second shuttered.",
-        "content": "Financial regulators have closed Signature Bank, marking the second major bank shutdown this year amid economic instability.",
-        "image": "img/spor.webp",
-        "author": "McKindney",
-        "tags": ["Gündem"]
-    },
+        "title": "Nintendo Switch'teki En İyi 10 Third-Party Oyun!",
+        "content": [
+          {
+            "game": "The Witcher 3: Wild Hunt",
+            "content": "The Witcher 3: Wild Hunt, derinlemesine bir hikaye ve etkileyici bir açık dünya sunuyor. Switch versiyonu, grafiklerden biraz taviz vermek zorunda kalmış olsa da, görsel olarak hala etkileyici. Karakterler, zengin bir şekilde tasarlanmış ve dünyası da oldukça büyük ve detaylı. Oyunun keşfedilecek çok fazla yan hikayesi ve görevleri mevcut, bu da oyunun saatlerce sürmesine olanak tanıyor. Ancak, grafikler biraz düşük çözünürlükte ve performans bazı anlarda zayıf olabiliyor. Özellikle yoğun savaşlar ve büyük ortamlar, frame rate düşüşlerine neden olabiliyor.",
+            "visual_quality": 75,
+            "performance": 70,
+            "story": 90,
+            "dct_rating": 80
+          },
+          {
+            "game": "Ori and the Will of the Wisps",
+            "content": "Ori and the Will of the Wisps, muazzam bir görsel tasarıma sahip bir metroidvania oyunu. Switch'teki performansı oldukça iyi; renkli ve detaylı dünyası, muazzam bir atmosfer yaratıyor. Hikaye oldukça etkileyici, duygusal bir yolculuk sunuyor ve oyuncuyu derinden etkiliyor. Ancak, bazı bölümlerde platform geçişleri zorlaşabiliyor ve bu da zaman zaman oyuncuları zorlayabiliyor. Oynarken aldığınız haz, bu tür zorlukları unutturuyor. Switch versiyonunda bazı grafiksel düşüşler olsa da, genel olarak harika bir deneyim sunuyor.",
+            "visual_quality": 85,
+            "performance": 80,
+            "story": 95,
+            "dct_rating": 90
+          },
+          {
+            "game": "Dead Cells",
+            "content": "Dead Cells, roguelike türünde bir aksiyon-platform oyunu. Switch versiyonunda akıcı bir deneyim sunuyor. Hızlı tempolu dövüşler ve keşif, oyunun en önemli öğelerinden. Grafikler, retro tarzında ve oldukça etkileyici. Her yeni oyun seansı, farklı seviyeler ve düşmanlarla karşınıza çıkıyor, bu da her defasında taze bir deneyim sunuyor. Ancak, bazı oyuncular için aşırı zorlayıcı olabilir. Dead Cells, mükemmel bir roguelike deneyimi sunuyor ve Switch’te rahatlıkla oynanabiliyor.",
+            "visual_quality": 80,
+            "performance": 85,
+            "story": 70,
+            "dct_rating": 90
+          },
+          {
+            "game": "Stardew Valley",
+            "content": "Stardew Valley, bir çiftlik simülasyonu oyunu olup, oyuncuya çok yönlü bir deneyim sunuyor. Switch'te mükemmel bir şekilde çalışıyor; sabah işe başlama, bahçe işleri yapma, köy halkı ile etkileşim gibi öğeler, sakin ve keyifli bir atmosfer yaratıyor. Grafikler 16-bit stilinde çok sevimli ve eğlenceli. Oynarken zamanın nasıl geçtiğini anlamayacaksınız. Ancak, bazı oyuncular için monotonlaşabilir. Yine de, huzurlu bir oyun arayanlar için harika bir seçenek.",
+            "visual_quality": 70,
+            "performance": 90,
+            "story": 80,
+            "dct_rating": 95
+          },
+          {
+            "game": "Red Dead Redemption",
+            "content": "Red Dead Redemption, bir Western temalı açık dünya aksiyon oyunu. Switch versiyonunda, grafikler doğal olarak PC veya konsol sürümlerine kıyasla biraz daha düşük. Yine de, detaylı ortamlar ve etkileyici karakter animasyonları, oyunun atmosferini güçlü tutuyor. Hikaye, geniş bir dünyada geçen etkileyici bir yolculuk sunuyor. Ancak, performans bazen sabit kalmıyor ve yoğun aksiyon sahnelerinde bazı sorunlar yaşanabiliyor. Ancak yine de bu oyun, Switch için çok özel bir deneyim.",
+            "visual_quality": 75,
+            "performance": 70,
+            "story": 95,
+            "dct_rating": 85
+          },
+          {
+            "game": "Hogwarts Legacy",
+            "content": "Hogwarts Legacy, Harry Potter evreninde geçen açık dünya RPG oyunudur. Switch sürümü, görsel olarak oldukça etkileyici ama bazen performans sıkıntıları yaşanabiliyor. Ancak, Hogwarts'da geçirdiğiniz zaman oldukça büyüleyici. Sihirbazlık dünyasında keşif yaparak yeni büyüler öğrenmek, görevleri tamamlamak oldukça eğlenceli. Hikaye, Harry Potter evreninin hayranlarını tatmin edecek şekilde derin ve zengin.",
+            "visual_quality": 80,
+            "performance": 75,
+            "story": 85,
+            "dct_rating": 90
+          },
+          {
+            "game": "NieR: Automata",
+            "content": "NieR: Automata, aksiyon, RPG ve hack-and-slash öğelerini bir arada sunan olağanüstü bir oyun. Switch versiyonu, grafiklerde bazı düşüşler yaşasa da, yine de derin hikaye ve harika dövüş mekanikleri sunuyor. Hikaye, oldukça felsefi bir yapıya sahip ve farklı sonlarla biten bir deneyim sunuyor. Bu oyunda sizi sadece aksiyon değil, hikayenin derinliği de etkileyip düşündürecek. Ancak, düşük çözünürlük bazı oyuncular için zorlayıcı olabilir.",
+            "visual_quality": 70,
+            "performance": 75,
+            "story": 95,
+            "dct_rating": 80
+          },
+          {
+            "game": "Hades",
+            "content": "Hades, roguelike aksiyon oyunlarının en iyi örneklerinden biri. Switch'te harika bir performans sergiliyor, dövüşler çok hızlı ve aksiyon hiç durmuyor. Görseller, el çizimi stilinde çok kaliteli ve atmosfere mükemmel uyuyor. Hikaye, her seferinde farklı bir şekilde ilerliyor, bu da oyunun her yeni turunda taze bir deneyim sağlıyor. Bu oyun, bir kez başladığınızda sizi bağımlı hale getirebilir.",
+            "visual_quality": 90,
+            "performance": 95,
+            "story": 85,
+            "dct_rating": 90
+          },
+          {
+            "game": "Divinity: Original Sin II",
+            "content": "Divinity: Original Sin II, strateji ve RPG türünde bir başyapıt. Switch sürümü, büyük harita ve çok sayıda seçenek sunan derinlemesine bir oyun deneyimi sağlıyor. Oyunun görselleri oldukça etkileyici, ancak çok fazla detay Switch'te bazen karışıklığa yol açabiliyor. Hikaye, zengin bir anlatıma sahip ve seçimleriniz oyunun akışını ciddi şekilde etkiliyor. Oyun, çok oyunculu modda da oynanabiliyor, bu da onu daha da eğlenceli hale getiriyor.",
+            "visual_quality": 85,
+            "performance": 80,
+            "story": 90,
+            "dct_rating": 85
+          },
+          {
+            "game": "Persona 5 Royal",
+            "content": "Persona 5 Royal, JRPG türünde mükemmel bir oyun. Switch'te harika bir şekilde çalışıyor ve görsel olarak gerçekten etkileyici. Karakterler, animasyonlar ve atmosfer oldukça derinlemesine işlenmiş. Hikaye, sıradışı bir yapıya sahip ve oyuncuyu sürekli merak içinde bırakıyor. Oyun, hem strateji hem de sosyal simülasyon öğelerini birleştirerek, oyuncuya benzersiz bir deneyim sunuyor. Switch'teki port, harika bir şekilde optimize edilmiş.",
+            "visual_quality": 90,
+            "performance": 85,
+            "story": 95,
+            "dct_rating": 95
+          }
+        ],
+        "image": "img/posts/eniyithirdparty.webp",
+        "author": "Ahmet Alparslan Maral",
+        "tags": ["Oyun"]
+      },
     {
         "id": 2,
         "title": "Killing of teacher and Hamas assault set a jittery France.",

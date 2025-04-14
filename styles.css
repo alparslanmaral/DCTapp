@@ -152,7 +152,7 @@ h2 {
 
 .news-details p {
     font-size: 12px;
-    color: #777;
+    color: #e7e1e1;
     margin: 0;
     transition: color 0.3s ease; /* Smooth transition for color */
 }
@@ -185,7 +185,7 @@ h2 {
 }
 
 .news-details p strong {
-    color: #333;
+    color: #e7e1e1;
     transition: color 0.3s ease; /* Smooth transition for color */
 }
 
