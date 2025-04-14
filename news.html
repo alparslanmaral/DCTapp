@@ -17,6 +17,7 @@
             </div>
             <div class="header-right">
                 <button class="bell-icon">🔔</button>
+                <button class="theme-toggle-button" onclick="toggleTheme()">🌓</button>
             </div>
         </header>
 
@@ -61,6 +62,22 @@
                 console.error('Error fetching posts:', error);
                 document.getElementById('news-details').innerHTML = `<p>Error loading news. Check console for details.</p>`;
             });
+
+        // Function to toggle between light and dark themes
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-theme');
+            const theme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+        }
+
+        // Load the saved theme from localStorage
+        window.onload = function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        }
     </script>
 </body>
 </html>

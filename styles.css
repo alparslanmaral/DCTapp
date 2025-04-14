@@ -162,3 +162,47 @@ footer {
 .footer-icon.active {
     color: #007bff; /* Highlight color for active icon */
 }
+
+/* Dark theme styles */
+.dark-theme body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme .container {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-theme header {
+    border-bottom: 1px solid #333;
+}
+
+.dark-theme .search-bar input {
+    background-color: #333;
+    border: 1px solid #555;
+    color: #e0e0e0;
+}
+
+.dark-theme .category-bar {
+    border-bottom: 1px solid #333;
+    color: #bbb;
+}
+
+.dark-theme .news-card:hover, .dark-theme .recommendation-card:hover {
+    background-color: #333;
+}
+
+.dark-theme footer {
+    background-color: #1e1e1e;
+    border-top: 1px solid #333;
+}
+
+/* Toggle button style */
+.theme-toggle-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: inherit; /* Inherit text color */
+}
